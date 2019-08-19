@@ -13,34 +13,6 @@ public class StreamTest {
 	public static void main(String[] args) {
 		// java8 stream
 
-		/**
-		 * stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、高效的聚合操作（aggregate
-		 * operation），或者大批量数据操作 (bulk data operation) stream() −
-		 * 为集合创建串行流。parallelStream() − 为集合创建并行流
-		 * 
-		 * Intermediate(中间):流可以后面跟随零个或多个 intermediate
-		 * 操作。其目的主要是打开流，做出某种程度的数据映射/过滤，然后返回一个新的流，交给下一个操作使用 map (mapToInt, flatMap 等)、
-		 * filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered
-		 * 
-		 * Terminal(终点):一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作
-		 * forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、
-		 * allMatch、 noneMatch、 findFirst、 findAny、 iterator
-		 * 
-		 * short-circuiting(短路): anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、
-		 * limit
-		 */
-
-		// 1. Individual values
-		Stream stream = Stream.of("a", "b", "c");
-		// 2. Arrays
-		String[] strArray = new String[] { "a", "b", "c" };
-		stream = Stream.of(strArray);
-		stream = Arrays.stream(strArray);
-		// 3. Collections
-		List<String> list = Arrays.asList(strArray);
-		stream = list.stream();
-		System.out.println(stream);
-
 		System.out.println("Java 7");
 		System.out.println("===========================================================");
 		List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl", "hgygcd", "", "gg", "ytt",
